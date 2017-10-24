@@ -1,0 +1,52 @@
+$teko: 'Teko';
+$open: 'Open Sans';
+
+@font-face {
+	font-family: 'Teko';
+	src: url('../fonts/Teko-Light.eot');
+	src: url('../fonts/Teko-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Teko-Light.woff') format('woff'),
+		url('../fonts/Teko-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Teko';
+	src: url('../fonts/Teko-Medium.eot');
+	src: url('../fonts/Teko-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Teko-Medium.woff') format('woff'),
+		url('../fonts/Teko-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Teko';
+	src: url('../fonts/Teko-Regular.eot');
+	src: url('../fonts/Teko-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Teko-Regular.woff') format('woff'),
+		url('../fonts/Teko-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Teko';
+	src: url('../fonts/Teko-Bold.eot');
+	src: url('../fonts/Teko-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Teko-Bold.woff') format('woff'),
+		url('../fonts/Teko-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Teko';
+	src: url('../fonts/Teko-Semibold.eot');
+	src: url('../fonts/Teko-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Teko-Semibold.woff') format('woff'),
+		url('../fonts/Teko-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}

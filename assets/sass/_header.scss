@@ -1,0 +1,690 @@
+.Header{
+  @include transition(background-color .4s ease, height .3s ease);
+
+   background-color: transparent;
+   border-bottom: 1px solid #858585;
+   height: 74px;
+   left: 0;
+   margin: 0 auto;
+   max-width: 1280px;
+   position: fixed;
+   right: 0;
+   top: 0;
+   width: 100%;
+   z-index: 4;
+
+  @include MQ(S){
+    height: 86px;
+  }
+
+  @include MQ(M){
+    border-bottom: 0;
+    height: 95px;
+  }
+
+  &--internal{
+    @extend .Header;
+  }
+
+  &.is-scrolling,
+  &--internal{
+
+    background-color: #fafafa;
+
+    @include MQ(maxM){
+      height: 60px;
+      
+      .MenuTrigger{
+        top: 18px;
+        width: 36px;
+
+        span{
+          height: 3px;
+
+          &::before,
+          &::after{
+            height: 3px;
+          }
+
+          &::after{
+            bottom: -8px;
+          }
+
+          &::before{
+            top: -8px;			
+          }
+        }
+      }
+
+      .SearchTrigger{
+        -top: 18px;
+      }
+
+      /* .Header__logo{
+        img{
+          width: 70px;
+        }
+      } */
+    }
+
+    @include MQ(M){
+      height: 70px;
+
+      .Header__logo{
+        img{
+          width: 140px;
+        }
+      }
+
+      .SearchTrigger{
+
+        > img{
+          height: 21px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  &.search-open{
+    .Search{
+      @include transform(translateX(0) translateY(-50%));
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .Header__logo{
+      opacity: 0;
+    }
+
+    .MenuTrigger{
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .SearchTrigger{
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include MQ(S){
+      .Header__logo{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__logo{
+    @include transition(all .4s ease);
+    @include center(y);
+
+    display: inline-block;
+    left: 30px;
+    position: absolute;
+
+    img{
+      @include transition(width .25s ease);
+      width: 80px;
+    }
+
+   .mobile,
+   .desktop{
+       position: relative;
+   }
+
+   .mobile{
+      display: inline-block;
+      width: 48px;
+   }
+
+   .desktop{
+      display: none;
+   }
+
+    @include MQ(M){      
+      @include transition(all .4s ease);
+
+      z-index: 2;
+
+      img{
+        width: 270px;
+      }
+
+      .mobile{
+         display: none;
+      }
+
+      .desktop{
+         display: inline-block;
+      }
+    }
+  }
+}
+
+.Menu{
+  @include transform(translateY(-100%));
+  @include transition(all .6s ease);
+  
+  background-color: $emperor;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;  
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+
+  @include MQ(M){
+    @include center(y);
+
+    background-color: transparent;
+    box-shadow: none;
+    display: inline-block;
+    height: auto;
+    left: inherit;
+    margin: 0 auto;
+    opacity: 1;
+    position: absolute;
+    right: 110px;
+    visibility: visible;
+    width: auto;
+  }
+
+  // MODIFICADORES
+  &--open{
+    @include transform(translateY(0));
+
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // se tiver algum submenu aberto, escurece o menu
+  &--subOpen{
+    background-color: darken($gray, 10%);
+
+    @include MQ(M){
+      background-color: transparent;
+    }
+  }
+
+  &--hasSub{
+    > a{
+      position: relative;
+
+      &::after,
+      &::before{
+        background-color: darken($torch-red, 8%);
+        content: "";
+        display: block;
+        height: 9px;
+        right: 19px;
+        position: absolute;
+        width: 2px;
+      }
+
+      &::after{
+        @include transform(rotate(45deg));
+        top: 26px;
+      }
+
+      &::before{
+        @include transform(rotate(-45deg));
+        top: 20px;
+      }
+
+      @include MQ(M){
+        &::after,
+        &::before{
+          display: none;
+        }
+
+        &::after{
+          @include transform(none);
+          @include transition(all .3s ease);
+          background: transparent url(../img/icon/selected.png) no-repeat center bottom;
+          background-size: cover;
+          bottom: -2px;
+          content: "";
+          display: block;
+          height: 7px;
+          left: 0;
+          margin: 0 auto;
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          right: 0;
+          top: inherit;
+          width: 100%;
+        }
+
+        &.is-selected{
+          position: relative;
+          
+          &::after{
+           bottom: -5px;
+           opacity: 1;
+           visibility: visible;
+          }
+        }
+      }
+    }
+
+    @include MQ(M){
+      position: inherit;
+    }
+  }
+
+  &__nav{
+    list-style: none;
+    margin: 0;
+    padding:  0 0 30px;
+    text-align: center;
+
+    @include MQ(M){
+      padding: 0;
+      display: inline-block;
+    }
+
+    a{
+      @include transition(color .3s ease);
+
+      color: #6f6f6f;
+      display: block;
+      font-family: $teko;
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 2.6px;
+      padding: 20px 0 20px 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      position: relative;
+
+      &:focus{
+        outline: 0;
+      }
+
+      @include MQ(S){
+        font-size: 22px;
+        padding: 15px 0 15px 15px;
+      }
+
+      @include MQ(M){
+        padding: 15px 0;
+
+        &::before,
+        &::after{
+          @include center(y);
+          @include transition(all .2s ease);
+          opacity: 0;
+          position: absolute;
+          visibility: hidden;
+        }
+
+        &::before{
+          content: "[";
+          left: -5px;
+        }
+
+        &::after{
+          content: "]";
+          right: -5px;
+        }
+
+        &:hover{
+          &::before,
+          &::after{
+            opacity: 1;
+            visibility: visible;
+          }
+
+          &::before{
+            left: -10px;
+          }
+
+          &::after{
+            right: -10px;
+          }
+        }
+      }
+    }
+
+    li{
+      @include MQ(M){
+        display: inline-block;
+        padding: 0 15px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-sub{
+    @include transform(translateX(-100%));
+    @include transition(all, .6s, ease);
+
+    background-color: $gray;
+    box-shadow: 1px -3px 2px 1px rgba(0, 0, 0, .3);
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    width: 95%;
+    z-index: 2;
+
+    @include MQ(M){
+      @include transform(none);
+      background-color: transparent;
+      box-shadow: none;
+      height: auto;
+      position: absolute;
+      left: 15px;
+      top: 60px;
+      width: calc(100% - 290px);
+
+      &::after{
+        @include transition(width .5s ease .15s, opacity .4s ease .1s);
+
+        background-color: white;
+        bottom: -15px;
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        opacity: 0;
+        width: 50%;
+      }
+    }
+
+    &--subOpen{
+      @include transform(translateX(0));
+
+      opacity: 1;
+      visibility: visible;
+
+      &::after{
+        opacity: 1;
+        width: 100%;
+      }
+
+      li{
+        @include MQ(M){ 
+          @for $i from 3 through 7 {
+            &:nth-child(#{$i}) { 
+              transition-delay: 0.1s * ($i - 2);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    li{
+      &:first-child{
+        border: 0;
+        color: darken($torch-red, 10%);
+        font-size: 26px;
+        margin-bottom: 30px;
+        text-align: center;
+
+        &::after{
+          display: none;
+        }
+
+        @include MQ(M){
+          display: none;
+        }
+      }
+
+      &:nth-child(2){
+        background-color: darken($gray, 8%);
+
+        a{
+          font-size: 10px;
+          padding: 5px 15px 5px 35px;
+          position: relative;
+
+          &::after,
+          &::before{
+            background-color: darken($torch-red, 8%);
+            content: "";
+            display: block;
+            height: 9px;
+            left: 19px;
+            position: absolute;
+            width: 2px;
+          }
+
+          &::after{
+            @include transform(rotate(45deg));
+            top: 13px;
+          }
+
+          &::before{
+            @include transform(rotate(-45deg));
+            top: 19px;
+          }
+        }
+
+        @include MQ(M){
+          display: none;
+        }
+      }
+
+      @include MQ(M){
+        @include transition(opacity .35s linear);
+        display: inline-block;
+        opacity: 0;
+
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__info{
+    padding: 30px 30px 0;
+    text-align: center;
+
+    @include MQ(M){
+      display: none;
+    }
+
+    > img{
+      display: block;
+      margin: 65px auto 50px;
+      max-width: 320px;
+      width: 80%;
+    }
+
+    h2{
+      color: #a6a6a6;
+      font-size: 32px;
+      font-weight: normal;
+      letter-spacing: 1.5px;
+      margin-bottom: 35px;
+    }
+
+    p{
+      color: $silver-chalice;
+      font-family: $open;
+      font-size: 14px;
+      letter-spacing: .75px;
+      line-height: 1.4;
+    }
+  }
+
+  &__redes{
+    text-align: center;
+    padding: 0;
+    margin: 40px 0 60px;
+
+    li{
+      display: inline-block;
+      margin: 0 10px;
+
+      img{
+        max-height: 25px;
+        max-width: 25px;
+      }
+    }
+  }
+}
+
+// MENU TRIGGER
+
+.MenuTrigger{
+	@include transition(all .3s linear);
+
+	display: inline-block;
+	height: 25px;
+	position: absolute;
+	right: 25px;
+	text-decoration: none;
+	top: 24px;
+  width: 36px;
+  z-index: 2;
+
+  @include MQ(S){
+	  width: 42px;
+  }
+
+	@include MQ(M){
+		display: none;
+	}
+
+	span{
+		@include center;
+		@include transition(all .2s linear);
+
+		background-color: black;
+		display: block;
+		height: 3px;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+
+		&::after, &::before{
+			@include transition(all .3s linear);
+			@include transform(rotate(0));
+
+			background-color: black;
+			content: "";
+			display: block;
+      height: 100%;
+      border-radius: 5px;
+			position: absolute;
+			width: 100%;
+		}
+
+		&::after{
+			bottom: -8px;
+		}
+
+		&::before{
+			top: -8px;			
+    }
+	}
+
+	&.is-open{
+		span{
+      background-color: transparent  !important;
+      
+      &::before,
+      &::after{
+        background-color: $gray;
+      }
+
+			&:before{
+				@include transform(rotate(45deg));
+        
+				top: 0  !important;
+			}
+
+			&:after{
+				@include transform(rotate(-45deg));
+
+				bottom: 0 !important;
+			}
+		}
+	}
+}
+
+.SearchTrigger{
+  @include transition(all .3s linear);
+  @include center(y);
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 70px;  
+
+  &:focus{
+    outline: none;
+  }
+
+  > img{
+    @include transition(all .3s ease);
+
+    display: block;
+    height: 26px;
+    width: 25px;
+  }
+}
+
+.Search{
+  @include transform(translateY(-50%));
+  @include transition(all .3s ease);
+
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  visibility: hidden;  
+  width: calc(100% - 30px);
+  right: 15px;
+
+  @include MQ(S){
+    max-width: 400px;
+  }
+
+  @include MQ(M){
+    max-width: 600px;
+    z-index: 2;
+  }
+
+  &__close{
+    background: transparent;
+    border: 0;
+    height: 20px;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    width: 20px;
+
+    > img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  input{
+    background: white;
+    padding: 5px 10px;
+    width: calc(100% - 40px);
+    height: 36px;
+    border: 1px solid $emperor;
+
+    &:focus{
+      outline: 0;
+    }
+  }
+
+  form{
+    margin: 0;
+  }
+}

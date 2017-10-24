@@ -1,0 +1,1190 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>PDK Motors</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+
+	<link rel="stylesheet" href="assets/css/normalize.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+	<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
+
+   <!-- FONTS -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+	<!-- FACEBOOK -->
+	<meta property="og:url" content="http://www.pdkmotors.com.br" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="PDK Motors" />
+	<meta property="og:description" content="First Class Vehicles" />
+	<meta property="og:image" content="" />
+
+</head>
+<body>
+	<!-- MODAL FINANCIAMENTO -->
+	<div class="modal fade" id="modalFinanciamento" tabindex="-1" role="dialog" data-backdrop="static">
+		<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+							<div class="container">
+								<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span>x</span></button>
+								<h4 class="modal-title">SOLICITE UM <span>FINANCIAMENTO</span></h4>
+								<h5 class="Form__subtitle">Envie seus dados para nosso setor financeiro:</h5>
+							</div>
+							<!-- container -->
+					</div>
+					<!-- modal-header -->
+					<div class="modal-body">
+							<div class="container">
+								<form id="formFinanciamento" class="Form">
+
+										<div class="row mt">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nome" placeholder="NOME">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nascimento" placeholder="NASCIMENTO" class="js-date">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<div class="Dropdown">
+																<span class="set-estado-civil">estado civil</span>
+																<input class="set-estado-civil" type="hidden" name="estadoCivil">
+																<ul class="js-scrollbar">
+																	<li><a href="#" data-set="set-estado-civil" data-option="casado">Casado (a)</a></li>
+																	<li><a href="#" data-set="set-estado-civil" data-option="solteiro">Solteiro (a)</a></li>
+																	<li><a href="#" data-set="set-estado-civil" data-option="divorciado">Divorciado (a)</a></li>
+																	<li><a href="#" data-set="set-estado-civil" data-option="viuvo">Viúvo (a)</a></li>
+																	<li><a href="#" data-set="set-estado-civil" data-option="uniao">União estável</a></li>
+																	<li><a href="#" data-set="set-estado-civil" data-option="outro">Outro</a></li>
+																</ul>
+														</div>
+														<!-- Dropdown -->
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="tel" name="rg" placeholder="RG" class="js-rg">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="profissao" placeholder="PROFISSÃO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="cpf" placeholder="CPF" class="js-cpf">
+													</div>
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<h5 class="Form__subtitle mt">Contato e endereçamento:</h5>
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="email" name="email" placeholder="E-MAIL">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="telefone" placeholder="TELEFONE" class="js-tel">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="endereco" placeholder="ENDEREÇO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="bairro" placeholder="BAIRRO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<div class="Dropdown">
+															<span class="set-estado">estado</span>
+															<input class="set-estado" type="hidden" name="estado">
+															<ul class="js-scrollbar">
+																	<li><a href="#/" data-set="set-estado" data-option="">Selecione</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="AC">Acre</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="AL">Alagoas</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="AP">Amapá</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="AM">Amazonas</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="BA">Bahia</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="CE">Ceará</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="DF">Distrito Federal</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="ES">Espirito Santo</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="GO">Goiás</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="MA">Maranhão</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="MS">Mato Grosso do Sul</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="MT">Mato Grosso</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="MG">Minas Gerais</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="PA">Pará</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="PB">Paraíba</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="PR">Paraná</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="PE">Pernambuco</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="PI">Piauí</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="RJ">Rio de Janeiro</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="RN">Rio Grande do Norte</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="RS">Rio Grande do Sul</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="RO">Rondônia</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="RR">Roraima</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="SC">Santa Catarina</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="SP">São Paulo</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="SE">Sergipe</a></li>
+																	<li><a href="#/" data-set="set-estado" data-option="TO">Tocantins</a></li>
+															</ul>
+														</div>
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="cidade" placeholder="CIDADE">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<h5 class="Form__subtitle mt">Contato e endereçamento:</h5>
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="banco" placeholder="BANCO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="desde" placeholder="DESDE">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="agencia" placeholder="AGÊNCIA">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="conta" placeholder="CONTA">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="renda_principal" placeholder="RENDA PRINCIPAL">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="false">
+														<input type="text" name="outras_rendas" placeholder="OUTRAS RENDAS">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<h5 class="Form__subtitle mt">Veículo de interesse:</h5>
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="marca" name="marca" placeholder="MARCA">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="modelo" name="modelo" placeholder="MODELO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="ano" name="ano" placeholder="ANO DE FABRICAÇÃO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="valor" name="valor" placeholder="PREÇO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="entrada" name="entrada" placeholder="ENTRADA DISPONíVEL">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="parcelas" name="parcelas" placeholder="Nº DE PARCELAS DESEJADAS">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-xs-12">
+													<div class="Form__control" data-validate="true">
+														<textarea rows="3" cols="10"></textarea>
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-8">
+													<div class="Form__control">
+														<input type="checkbox" id="checkbox_newsletter_financiamento">
+														<label for="checkbox_newsletter_financiamento">Receber novidades por e-mail.</label>
+													</div>
+											</div>
+											<!-- col -->
+
+											<div class="col-md-4">
+													<div class="Form__control">
+														<input type="submit" class="u-button js-submitForm" value="enviar">
+													</div>
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+								</form>
+								<!-- Form -->
+							</div>
+							<!-- container -->
+					</div>
+				</div>
+				<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- MODAL CONTATO -->
+	<div class="modal fade" id="modalContato" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+							<div class="container">
+								<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span>x</span></button>
+								<h4 class="modal-title">ENTRE EM <span>CONTATO</span></h4>
+								<h5 class="Form__subtitle">Envie seus dados e de seu veículo para nosso setor de análise:</h5>
+							</div>
+					</div>
+					<div class="modal-body">
+							<div class="container">
+								<form id="formContato" class="Form">
+										<div class="row mt">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nome" placeholder="NOME">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nascimento" placeholder="NASCIMENTO"  class="js-date">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="email" name="email" placeholder="E-MAIL">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="telefone" placeholder="TELEFONE" class="js-tel">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<h5 class="Form__subtitle mt">Procurando por um veículo específico?</h5>
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="marca" name="marca" placeholder="MARCA">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="modelo" name="modelo" placeholder="MODELO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="ano" name="ano" placeholder="ANO DE FABRICAÇÃO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="valor" name="valor" placeholder="PREÇO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-xs-12">
+													<div class="Form__control" data-validate="true">
+														<textarea rows="3" cols="10"></textarea>
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-8">
+													<div class="Form__control">
+														<input type="checkbox" id="checkbox_newsletter_contato">
+														<label for="checkbox_newsletter_contato">Receber novidades por e-mail.</label>
+													</div>
+											</div>
+											<!-- col -->
+
+											<div class="col-md-4">
+													<div class="Form__control">
+														<input type="submit" class="u-button js-submitForm" value="enviar">
+													</div>
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+
+								</form>
+								<!-- Form-->
+							</div>
+							<!-- container -->
+					</div>
+				</div>
+				<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- MODAL AVALIE -->
+	<div class="modal fade" id="modalAvalie" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+							<div class="container">
+								<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span>x</span></button>
+								<h4 class="modal-title">SOLICITE UMA <span>AVALIAÇÃO</span></h4>
+								<h5 class="Form__subtitle mt">Envie seus dados e de seu veículo para nosso setor de análise:</h5>
+							</div>
+							<!-- container -->
+					</div>
+					<div class="modal-body">
+							<div class="container">
+								<form id="formAvalie" class="Form">
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nome" placeholder="NOME">
+													</div>
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="nascimento" placeholder="NASCIMENTO" class="js-date">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="email" name="email" placeholder="E-MAIL">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="telefone" placeholder="TELEFONE" class="js-tel">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="endereco" placeholder="ENDEREÇO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="bairro" placeholder="BAIRRO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="Form__control" data-validate="true">
+													<div class="Dropdown">
+														<span class="set-estado-2">estado</span>
+														<input class="set-estado-2" type="hidden" name="estado2">
+														<ul class="js-scrollbar">
+															<li><a href="#/" data-set="set-estado-2" data-option="">Selecione</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="AC">Acre</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="AL">Alagoas</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="AP">Amapá</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="AM">Amazonas</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="BA">Bahia</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="CE">Ceará</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="DF">Distrito Federal</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="ES">Espirito Santo</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="GO">Goiás</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="MA">Maranhão</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="MS">Mato Grosso do Sul</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="MT">Mato Grosso</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="MG">Minas Gerais</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="PA">Pará</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="PB">Paraíba</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="PR">Paraná</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="PE">Pernambuco</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="PI">Piauí</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="RJ">Rio de Janeiro</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="RN">Rio Grande do Norte</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="RS">Rio Grande do Sul</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="RO">Rondônia</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="RR">Roraima</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="SC">Santa Catarina</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="SP">São Paulo</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="SE">Sergipe</a></li>
+															<li><a href="#/" data-set="set-estado-2" data-option="TO">Tocantins</a></li>
+														</ul>
+													</div>
+												</div><!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-sm-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" name="cidade" placeholder="CIDADE">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<h5 class="Form__subtitle mt">Veículo de interesse:</h5>
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="marca" name="marca" placeholder="MARCA">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="modelo" name="modelo" placeholder="MODELO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="ano" name="ano" placeholder="ANO DE FABRICAÇÃO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+											<div class="col-md-6">
+													<div class="Form__control" data-validate="true">
+														<input type="text" id="valor" name="valor" placeholder="PREÇO">
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-xs-12">
+													<div class="Form__control" data-validate="true">
+														<textarea rows="3" cols="10"></textarea>
+													</div>
+													<!-- Form__control -->
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+										<div class="row">
+											<div class="col-md-8">
+													<div class="Form__control">
+														<input type="checkbox" id="checkbox_newsletter_avalie">
+														<label for="checkbox_newsletter_avalie">Receber novidades por e-mail.</label>
+													</div>
+											</div>
+											<!-- col -->
+
+											<div class="col-md-4">
+													<div class="Form__control">
+														<input type="submit" class="u-button js-submitForm" value="enviar">
+													</div>
+											</div>
+											<!-- col -->
+										</div>
+										<!-- row -->
+
+								</form>
+							</div>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<div class="PageWrapper">
+		<header class="Header">
+			<div class="container">
+				<a href="index.html" class="Header__logo">
+					<img src="assets/img/logo-pdk.png" alt="PDK Motors" class="mobile">
+					<img src="assets/img/logo-pdk-horizontal.png" alt="PDK Motors" class="desktop">
+				</a>
+
+				<button class="SearchTrigger">
+					<img src="assets/img/icons/search.svg" alt="Buscar">
+				</button> <!-- SearchTrigger -->
+
+				<div class="Search js-resultHeader">
+					<form>
+						<input type="text" class="js-searchHeader">
+						<div class="SearchResult"></div>
+					</form> <!-- Search -->
+
+					<button class="Search__close">
+						<img src="assets/img/icons/close.svg" alt="Buscar">
+					</button>
+				</div>
+
+				<a href="#/" class="MenuTrigger">
+				<span></span>
+			</a>
+
+			<nav class="Menu">
+				<div class="Menu__info">
+					<img src="assets/img/logo-pdk.png" alt="PDK Motors">
+					<h2>PDK MOTORS</h2>
+					<p>
+							Uma trajetória de sucesso acumulada ao longo de muitos anos trabalhando nas melhores concessionárias de veículos importados
+							no segmento premium, nos impeliu a realizar um antigo sonho.
+					</p>
+
+					<ul class="Menu__redes">
+						<li>
+							<a href="https://www.facebook.com/pdkmotors/" target="_blank">
+								<img src="assets/img/icons/facebook.svg" alt="Facebook">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/channel/UCqQsdmk7bLsBvAqDmos5mBQ" target="_blank">
+								<img src="assets/img/icons/youtube.svg" alt="YouTube">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/pdkmotors" target="_blank">
+								<img src="assets/img/icons/twitter.svg" alt="Twitter">
+							</a>
+						</li>
+						<li>
+							<a href="https://api.whatsapp.com/send?phone=5511970209999" target="_blank">
+								<img src="assets/img/icons/whatsapp.svg" alt="WhatsApp">
+							</a>
+						</li>
+					</ul>
+				</div> <!-- Menu__info -->
+
+				<ul class="Menu__nav">
+					<li>
+							<a href="index.html#sobre">SOBRE</a>
+					</li>
+					<li>
+							<a href="estoque.html">SHOWROOM</a>
+					</li>
+					<li>
+							<a href="blog.html">BLOG</a>
+					</li>
+					<li>
+							<a href="index.html#servicos">SERVIÇOS</a>
+					</li>
+					<li><a href="#/" data-toggle="modal" data-target="#modalContato">CONTATO</a></li>
+				</ul>
+			</nav> <!-- Menu -->
+
+			</div> <!-- container -->
+		</header>
+		<!-- Header -->
+
+		<div class="PageContent">
+
+			<section class="Slider js-SliderProduct">
+				<a data-fancybox="gallery" href="assets/img/carros/c5.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c5.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1 class="wow fadeIn">
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c6.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c6.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c5.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c5.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c6.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c6.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c5.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c5.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c6.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c6.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c5.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c5.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<a data-fancybox="gallery" href="assets/img/carros/c6.jpg" class="Slider__item" style="background-image: url(assets/img/carros/c6.jpg);">
+					<div class="container">
+						<div class="Slider__content">
+							<h1>
+								<span>PORSCHE</span>
+								CAYMAN 3.8 GT4 6CC
+							</h1>
+						</div> <!-- Banner-content -->
+					</div> <!-- container -->
+				</a>  <!-- Slider__item -->
+
+				<div class="slick-count"></div>
+			</section> <!-- Slider--internal -->
+
+			<div class="SliderNav js-SliderNav">
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c5.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c6.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c5.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c6.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c5.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c6.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c5.jpg);"></div>
+				<div class="SliderNav__item" style="background-image: url(assets/img/carros/c6.jpg);"></div>
+			</div>
+
+			<section class="Detail">
+        <div class="Detail__left">
+					<h2>FICHA <span>TÉCNICA</span></h2>
+
+          <div class="js-scrollbar">
+            <ul>
+              <li>Cor: <span>Cinza</span></li>
+              <li>Ano: <span>2013/2013</span></li>
+              <li>Km: <span>17.650</span></li>            
+              <li>Combustível: <span>GASOLINA</span></li>
+              <li>Câmbio: <span>AUTOMÁTICO</span></li>            
+              <li>Preço (R$): <span>149.000,00</span></li>
+              <li>Placa: <span>XXX-XXXX</span></li>            
+              <li>Portas: <span>2</span></li>            
+              <li>Motor: <span>4.0L Turbo Potência: 540 cv</span></li>            
+              <li>Multimídia: <span>Sistema de som Mini Naviga- tion System com alto falantes Harman/Kardon, GPS, computador de bordo, entradas USB e auxiliar, conexão via Bluetooth.</span></li>
+              <li>Bancos: Em couro creme.</li>
+              <li>Freios: <span>ABS</span></li>
+              <li>Faróis: <span>Bi xenon</span></li>
+              <li>Rodas: <span>Aro 20" com pneus Run at</span></li>            
+              <li>Sensor de estacionamento: <span>Traseiro</span></li>            
+              <li>Conversível: <span>sim</span></li>            
+              <li>Bluetooth: <span>sim</span></li>            
+              <li>Observações: <span>Cambio Steptronic de 6 marchas, botão Sport que con gura direção, cambio e pedal do acelerador, volante multifuncional com Shift</span></li>
+            </ul>
+          </div>
+        </div> <!-- Detail__left -->
+
+        <div class="Detail__right">
+					<h2>REALIZE UMA <span>PROPOSTA</span></h2>
+					<p>
+						Interessado? Entre em contato para tirar dúvidas ou faça uma proposta agora mesmo:
+					</p>
+
+					<form id="formContato" class="Form">
+						<div class="Form__control" data-validate="true">
+							<input type="text" placeholder="NOME">
+							<span class="Form__required">*</span>
+						</div> <!-- Form__control -->
+
+						<div class="Form__control" data-validate="true">
+							<input type="text" placeholder="EMAIL">
+							<span class="Form__required">*</span>
+						</div> <!-- Form__control -->
+
+						<div class="Form__control">
+							<input type="tel" placeholder="TELEFONE">
+							<span class="Form__required">*</span>
+						</div> <!-- Form__control -->
+
+						<div class="Form__control" data-validate="true">
+							<input type="text" placeholder="CIDADE">
+							<span class="Form__required">*</span>
+						</div> <!-- Form__control -->
+
+						<div class="Form__control" data-validate="true">
+              <textarea rows="2" cols="30" placeholder="MENSAGEM"></textarea>
+              <span class="Form__required">*</span>
+            </div>
+
+						<button class="u-button js-submitForm"><span>enviar</span></button>
+						
+					</form>
+
+					<div class="Detail__info">
+						<p>
+							Se preferir ligue agora e fale conosco: <span>+55 (11) 5182-9999</span>
+						</p>
+					</div>
+        </div>
+      </section> <!-- Detail -->
+
+			<section class="Geral">
+				<div class="container">
+						<h3 class="wow fadeIn">CONFIRA OS VEÍCULOS <span>SIMILARES</span></h3>
+				</div>
+			</section> <!-- Geral -->
+
+			<section class="Similar">
+				<div class="Grid">
+					<div class="Grid__item mix wow fadeIn" data-marca="lamborghini" data-modelo="2013" data-valor="1000000">
+						<a href="carro.html">
+							<div class="Grid__img" style="background-image: url(assets/img/carros/c1.jpg)"></div>
+							<div class="Grid__title">
+								<h4>Porsche</h4>
+								<h5>CAYMAN 3.8 GT4 6CC</h5>
+								<small>2015 / 2015 - 3.400 km</small>
+							</div> <!-- Grid__title -->
+						</a>
+					</div> <!-- Grid__item mix -->
+
+					<div class="Grid__item mix wow fadeIn" data-wow-delay=".2s" data-marca="lamborghini" data-modelo="2013" data-valor="1000000">
+						<a href="carro.html">
+							<div class="Grid__img" style="background-image: url(assets/img/carros/c1.jpg)"></div>
+							<div class="Grid__title">
+								<h4>Porsche</h4>
+								<h5>CAYMAN 3.8 GT4 6CC</h5>
+								<small>2015 / 2015 - 3.400 km</small>
+							</div> <!-- Grid__title -->
+						</a>
+					</div> <!-- Grid__item mix -->
+
+					<div class="Grid__item mix wow fadeIn" data-wow-delay=".4s" data-marca="lamborghini" data-modelo="2013" data-valor="1000000">
+						<a href="carro.html">
+							<div class="Grid__img" style="background-image: url(assets/img/carros/c1.jpg)"></div>
+							<div class="Grid__title">
+								<h4>Porsche</h4>
+								<h5>CAYMAN 3.8 GT4 6CC</h5>
+								<small>2015 / 2015 - 3.400 km</small>
+							</div> <!-- Grid__title -->
+						</a>
+					</div> <!-- Grid__item mix -->
+
+					<div class="Grid__item mix wow fadeIn" data-wow-delay=".6s" data-marca="lamborghini" data-modelo="2013" data-valor="1000000">
+						<a href="carro.html">
+							<div class="Grid__img" style="background-image: url(assets/img/carros/c1.jpg)"></div>
+							<div class="Grid__title">
+								<h4>Porsche</h4>
+								<h5>CAYMAN 3.8 GT4 6CC</h5>
+								<small>2015 / 2015 - 3.400 km</small>
+							</div> <!-- Grid__title -->
+						</a>
+					</div> <!-- Grid__item mix -->
+
+				</div>
+			</section> <!-- Similar -->
+
+			<section class="Ver">
+				<div class="container">
+					<a href="estoque.html" class="u-button wow fadeInUp">
+						<span>ver estoque completo</span>
+					</a>
+				</div>
+			</section> <!-- Ver -->
+
+			<section class="Info">
+				<div class="Info__item wow fadeIn">
+					<div class="Info__content">
+						<h3>Precisa de um<br>financiamento?</h3>
+						<small>Envia seus dados para nosso<br>setor financeiro</small>
+						<a href="#/" class="u-button wow fadeInUp" data-toggle="modal" data-target="#modalFinanciamento"><span>simular</span></a>
+					</div> <!-- Info__content -->
+				</div> <!-- Info__item -->
+
+				<div class="Info__item wow fadeIn" data-wow-delay=".2s">
+					<div class="Info__content">
+						<h3>Deseja vender seu<br>veículo?</h3>
+						<small>Envia seus dados para nosso<br>setor financeiro</small>
+						<a href="#/" class="u-button wow fadeInUp" data-wow-delay=".3s" data-toggle="modal" data-target="#modalAvalie"><span>financie</span></a>
+					</div> <!-- Info__content -->
+				</div> <!-- Info__item -->
+
+				<div class="Info__item wow fadeIn" data-wow-delay=".4s">
+					<div class="Info__content">
+						<h3>Não encontrou<br>seu veículo?</h3>
+						<small>Envia seus dados para nosso<br>setor financeiro</small>
+						<a href="#/" class="u-button wow fadeInUp" data-wow-delay=".5s" data-toggle="modal" data-target="#modalContato"><span>solicitar</span></a>
+					</div> <!-- Info__content -->					
+				</div> <!-- Info__item -->
+			</section> <!-- Info -->
+		</div> <!-- PageContent -->
+
+		<footer class="SiteFooter">
+			<div class="container">
+				<div class="SiteFooter__info">
+					<img src="assets/img/logo-pdk-black.png" alt="PDK Motors" class="wow fadeIn">
+
+					<ul class="SiteFooter__nav">
+						<li class="wow fadeIn">
+								<a href="#sobre" class="js-scroll">SOBRE</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".2s">
+								<a href="estoque.html">SHOWROOM</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".4s">
+								<a href="blog.html">BLOG</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".6s">
+								<a href="servicos.html">SERVIÇOS</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".8s"><a href="#/" data-toggle="modal" data-target="#modalContato">CONTATO</a></li>
+					</ul>
+
+					<p class="wow fadeInUp">
+							Uma trajetória de sucesso acumulada ao longo de muitos anos trabalhando nas melhores concessionárias de veículos importados
+							no segmento premium, nos impeliu a realizar um antigo sonho.
+					</p>
+						
+					<ul class="SiteFooter__redes">
+						<li class="wow fadeIn">
+							<a href="https://www.facebook.com/pdkmotors/" target="_blank">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="160.77px" height="309.466px" viewBox="225.675 332.768 160.77 309.466"
+									enable-background="new 225.675 332.768 160.77 309.466" xml:space="preserve">
+								<path id="f" fill="#434343" d="M330.026,642.234V501.068h47.454l7.052-54.984h-54.506v-35.143c0-15.897,4.423-26.775,27.253-26.775
+									h29.166v-49.247c-5.021-0.717-22.353-2.151-42.434-2.151c-42.075,0-70.763,25.699-70.763,72.794v40.641h-47.573v54.984h47.573
+									v141.047H330.026z"/>
+								</svg>
+							</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".2s">
+							<a href="https://www.youtube.com/channel/UCqQsdmk7bLsBvAqDmos5mBQ" target="_blank">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="28.801px" height="20.164px" viewBox="1.599 5.919 28.801 20.164" enable-background="new 1.599 5.919 28.801 20.164"
+									xml:space="preserve">
+									<g transform="translate(144 0)">
+										<path fill="#434343" d="M-113.6,10.227c0-2.379-1.928-4.308-4.305-4.308h-20.192c-2.377,0-4.305,1.929-4.305,4.308v11.546
+											c0,2.379,1.928,4.31,4.305,4.31h20.192c2.377,0,4.305-1.931,4.305-4.31V10.227z M-130.881,20.871V10.025l8.225,5.423
+											L-130.881,20.871z"/>
+									</g>
+								</svg>
+							</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".4s">
+							<a href="https://twitter.com/pdkmotors" target="_blank">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="380.945px"  height="309.697px" viewBox="115.587 332.537 380.945 309.697" enable-background="new 115.587 332.537 380.945 309.697" xml:space="preserve">
+									<path id="XMLID_22_" fill="#434343" d="M235.357,642.234c143.796,0,222.448-119.173,222.448-222.447c0-3.348,0-6.694-0.239-10.16
+										c15.3-11.117,28.448-24.743,38.967-40.521c-14.224,6.335-29.404,10.519-44.943,12.312c16.376-9.801,28.567-25.102,34.425-43.27
+										c-15.3,9.084-32.154,15.539-49.605,19.005c-29.644-31.437-79.13-32.991-110.566-3.347c-20.32,19.125-28.927,47.573-22.592,74.707
+										c-62.873-3.108-121.443-32.871-161.128-81.64c-20.798,35.74-10.16,81.401,24.146,104.351c-12.431-0.358-24.623-3.706-35.501-9.802
+										c0,0.358,0,0.598,0,0.956c0,37.175,26.297,69.209,62.754,76.62c-11.475,3.107-23.547,3.586-35.262,1.314
+										c10.28,31.795,39.565,53.67,73.034,54.268c-27.731,21.754-61.917,33.588-97.06,33.588c-6.216,0-12.432-0.358-18.646-1.076
+										C151.207,630.042,192.804,642.234,235.357,642.234"/>
+								</svg>
+							</a>
+						</li>
+						<li class="wow fadeIn" data-wow-delay=".6s">
+							<a href="https://api.whatsapp.com/send?phone=5511970209999" target="_blank">
+								<svg enable-background="new 0 0 100 100" height="100px" id="Layer_1" version="1.1" viewBox="0 0 100 100" width="100px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><defs><rect height="100" id="SVGID_1_" width="100"/></defs><path fill="#434343" d="M95,49.247c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L5,95.406   l7.975-23.522c-4.023-6.606-6.34-14.354-6.34-22.637c0-24.213,19.781-43.841,44.184-43.841C75.223,5.406,95,25.034,95,49.247    M50.818,12.388c-20.484,0-37.146,16.535-37.146,36.859c0,8.066,2.629,15.535,7.076,21.611l-4.641,13.688l14.275-4.537   c5.865,3.851,12.891,6.097,20.437,6.097c20.481,0,37.146-16.533,37.146-36.858C87.964,28.924,71.301,12.388,50.818,12.388    M73.129,59.344c-0.273-0.447-0.994-0.717-2.076-1.254c-1.084-0.537-6.41-3.138-7.4-3.494c-0.993-0.359-1.717-0.539-2.438,0.536   c-0.721,1.076-2.797,3.495-3.43,4.212c-0.632,0.719-1.263,0.809-2.347,0.271c-1.082-0.537-4.571-1.673-8.708-5.334   c-3.219-2.847-5.393-6.364-6.025-7.44c-0.631-1.075-0.066-1.656,0.475-2.191c0.488-0.482,1.084-1.255,1.625-1.882   c0.543-0.628,0.723-1.075,1.082-1.793c0.363-0.717,0.182-1.344-0.09-1.883c-0.27-0.537-2.438-5.825-3.34-7.976   c-0.902-2.151-1.803-1.793-2.436-1.793c-0.631,0-1.354-0.09-2.076-0.09s-1.896,0.269-2.889,1.344   c-0.992,1.076-3.789,3.676-3.789,8.963c0,5.288,3.879,10.397,4.422,11.114c0.541,0.716,7.49,11.92,18.5,16.223   C63.2,71.177,63.2,69.742,65.186,69.562c1.984-0.179,6.406-2.599,7.312-5.107C73.398,61.943,73.398,59.792,73.129,59.344"/></g></svg>
+							</a>
+						</li>
+					</ul>
+
+					<div class="SiteFooter__column">
+						<div class="SiteFooter__endereco">
+							<p>
+								R. Américo Brasiliense, 999 Chacara<br>
+								Santo Antonio São Paulo -<br>SP 04715-003
+							</p>
+
+							<p>
+								(11) 5182-9999
+							</p>
+
+							<p>
+								<a href="mailto:contato@pdkmotors.com.br">contato@pdkmotors.com.br</a><br>
+								<a href="mailto:vendas@pdkmotors.com.br">vendas@pdkmotors.com.br</a>
+							</p>						
+						</div> <!-- SiteFooter__endereco -->
+
+						<div class="SiteFooter__horario">
+							<p>
+								Segunda - sexta:<br>
+								9:00 às 18:00
+							</p>
+
+							<p>
+								Sábados:<br>
+								9:00 às 14:00
+							</p>
+
+							<p>
+								Domingos e Feriados:<br>
+								FECHADO
+							</p>
+						</div> <!-- SiteFooter__horario -->
+
+						<div class="SiteFooter__newsletter">
+							<h6>NEWSLETTER</h6>
+							<p>Receba novidades exclusivas no seu e-mail</p>
+							<form id="formNewsletter">
+								<div data-validate="true">
+									<input type="text" placeholder="SEU NOME">
+								</div>
+								<div data-validate="true">
+									<input type="email" placeholder="SEU E-MAIL">
+								</div>
+								<input type="submit" value="cadastrar" class="js-submitForm">
+							</form>
+						</div>
+					</div>
+				</div> <!-- SiteFooter__info -->
+
+				
+			</div> <!-- container -->
+
+			<div class="Map">
+				<div id="map"></div>
+			</div>
+
+			<div class="Copyright">
+				<div class="container">
+					<small>
+					© 2017 - PDKMOTORS - Todos os direitos reservados</span>
+				</small>
+				</div>
+			</div> <!-- Copyright -->
+		</footer>
+		<!-- SiteFooter -->
+	</div>
+	<!-- PageWrapper -->
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDlTsHipUyB9i6mZILHjkxVQsnoZGSzZ_4"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/instafeed.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/jquery.autocomplete.min.js"></script>
+	<script src="assets/js/jquery.fancybox.min.js"></script>
+	<script src="assets/js/jquery.mask.min.js"></script>
+	<script src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/js.js"></script>
+	
+	<!-- <script src="assets/js/js.min.js"></script> -->
+</body>
+</html>
